@@ -54,3 +54,28 @@ Usando el script de "Clase01_Script.sql"
 4. **Actualización de Datos**: Cambiar la nacionalidad del autor con ID 3 a "Argentino - Francés".
 5. **Inserción de Datos**: Agregar un nuevo autor a la tabla "Autores" con ID 4, nombre "Isabel Allende" y nacionalidad "Chilena".
 6. **Eliminación de Datos**: Eliminar el libro con ID 1 de la tabla "Libros".
+
+## Respuestas: 
+1. ```SELECT * FROM Libros;```
+2. ```SELECT Autores.Nombre, Autores.Nacionalidad FROM Autores JOIN Libros ON Autores.ID = Libros.Autor_ID WHERE Libros.ID = 2;```
+3. ```SELECT Libros.Titulo, Autores.Nombre FROM Libros JOIN Autores ON Libros.Autor_ID = Autores.ID;```
+4. ```UPDATE Autores SET Nacionalidad = 'Argentino - Francés' WHERE ID = 3;```
+5. ```INSERT INTO Autores (ID, Nombre, Nacionalidad) VALUES (4, 'Isabel Allende', 'Chilena');```
+6. ```DELETE FROM Libros WHERE ID = 1;```
+
+## Ejercicios sin solución:
+
+1. **Crear un nuevo libro**:
+Inserta un nuevo registro en la tabla "Libros" con los siguientes datos:
+   - ID: 4
+   - Título: "El amor en los tiempos del cólera"
+   - Autor_ID: 1
+2. **Actualizar un libro**:
+Actualiza el título del libro con ID 2 a "Conversación en la catedral".
+3. **Eliminar un autor**:
+Elimina el autor con ID 3 de la tabla "Autores" y todos los libros asociados a este autor.
+4. **Leer todos los libros de un autor**:
+Muestra todos los libros escritos por el autor con ID 1.
+5. **Actualizar la nacionalidad de un autor**:
+Cambia la nacionalidad del autor con ID 2 a "Peruana".
+
