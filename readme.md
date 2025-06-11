@@ -145,18 +145,52 @@ Cambia la nacionalidad del autor con ID 2 a "Peruana".
 
 1. **Función para Calcular Años de Antigüedad**:
    - **Descripción**: Crea una función `fn_AntiguedadEmpleado` que calcule la cantidad de años que un empleado ha trabajado en la empresa basado en la fecha de ingreso.
-  
+   - **Script**:
+     ```sql
+     CREATE FUNCTION fn_AntiguedadEmpleado (@FechaIngreso DATE) RETURNS INT AS 
+     BEGIN
+         RETURN DATEDIFF(YEAR, @FechaIngreso, GETDATE());
+     END;
+     ```
+
 2. **Consulta de Antigüedad por Departamento**:
    - **Descripción**: Muestra el nombre del empleado, su antigüedad y el departamento al que pertenece.
+   - **Script**:
+     ```sql
+     SELECT 
+         FirstName, 
+         Department, 
+         dbo.fn_AntiguedadEmpleado(HireDate) AS Antiguedad 
+     FROM 
+         Employees;
+     ```
 
 3. **Creación de un Procedimiento para Aumentar Salario**:
    - **Descripción**: Crea un procedimiento almacenado `sp_AumentarSalario` que incremente el salario de los empleados de un departamento específico en un porcentaje dado.
+   - **Script**:
+     ```sql
+     CREATE PROCEDURE sp_AumentarSalario @Departamento NVARCHAR(50), @Porcentaje DECIMAL(5,2) AS
+     BEGIN
+         UPDATE Employees
+         SET Salary = Salary + (Salary * @Porcentaje / 100)
+         WHERE Department = @Departamento;
+     END;
+     ```
 
 4. **Aplicar el Procedimiento de Aumento de Salario**:
    - **Descripción**: Aumenta el salario en un 10% para todos los empleados del departamento "IT".
- 
+   - **Script**:
+     ```sql
+     EXEC sp_AumentarSalario @Departamento = 'IT', @Porcentaje = 10;
+     ```
+
 5. **Índice para Acelerar Consultas por Antigüedad**:
    - **Descripción**: Crea un índice en la columna `HireDate` para acelerar las consultas relacionadas con la antigüedad de los empleados.
+   - **Script**:
+     ```sql
+     CREATE INDEX idx_HireDate ON Employees (HireDate);
+     ```
+
   
 ### Ejercicios sin Solución
 
