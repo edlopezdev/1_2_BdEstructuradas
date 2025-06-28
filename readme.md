@@ -27,7 +27,7 @@ Modalidad de Enseñanza
 - `***.sql`: Archivo con las ejercicios/soluciones de las clases.
 # Guía de Ejercicios - Bases de Datos Estructuradas
 
-Esta guía contiene 20 ejercicios para reforzar los contenidos del curso, alineados con los objetivos de la asignatura **Bases de Datos Estructuradas** (INACAP).
+Esta guía contiene 20 ejercicios para reforzar los contenidos del curso, alineados con los objetivos de la asignatura **Bases de Datos Estructuradas** 
 
 ---
 
