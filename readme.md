@@ -25,7 +25,73 @@ Modalidad de Enseñanza
 ## Contenido del Repositorio
 
 - `***.sql`: Archivo con las ejercicios/soluciones de las clases.
+# Guía de Ejercicios - Bases de Datos Estructuradas
 
+Esta guía contiene 20 ejercicios para reforzar los contenidos del curso, alineados con los objetivos de la asignatura **Bases de Datos Estructuradas** (INACAP).
+
+---
+
+## 🟣 Parte 1 - DDL y DML (Definición y manipulación de datos)
+
+1️⃣ **Crea una base de datos**
+> Crea una base de datos llamada `ComercioDB` y úsala.
+
+2️⃣ **Crea tablas**
+> Crea las tablas `Clientes`, `Productos` y `Ventas` con claves primarias apropiadas.
+
+3️⃣ **Relaciones**
+> Agrega claves foráneas entre `Ventas` y `Clientes`, y entre `DetalleVentas` y `Ventas`.
+
+4️⃣ **Modificar tabla**
+> Agrega una columna `Descuento` (DECIMAL) a la tabla `Ventas`.
+
+5️⃣ **Eliminar columna**
+> Elimina la columna `Descuento` de la tabla `Ventas`.
+
+6️⃣ **Insertar clientes**
+> Inserta 5 registros en `Clientes` con nombres, correos y ciudades distintas.
+
+7️⃣ **Insertar productos**
+> Inserta 3 productos con nombre, precio y stock.
+
+8️⃣ **Insertar venta**
+> Inserta una venta con un detalle asociado en `DetalleVentas`.
+
+9️⃣ **Actualizar stock**
+> Modifica el stock de un producto específico.
+
+🔟 **Eliminar cliente**
+> Elimina un cliente que no tenga ventas asociadas.
+
+---
+
+## 🟣 Parte 2 - Consultas SQL (DQL)
+
+1️⃣ **LIKE**
+> Muestra el nombre y ciudad de los clientes cuyo nombre comienza con ‘M’.
+
+2️⃣ **BETWEEN**
+> Lista los productos con precio mayor a 20.000 y menor o igual a 100.000.
+
+3️⃣ **IN**
+> Muestra las ventas de los clientes que viven en `Santiago` o `Valparaíso`.
+
+4️⃣ **JOIN**
+> Lista el nombre del cliente y la fecha de venta usando un JOIN entre `Clientes` y `Ventas`.
+
+5️⃣ **JOIN múltiple**
+> Muestra el nombre de los productos vendidos y la cantidad usando JOIN entre `Productos`, `DetalleVentas` y `Ventas`.
+
+6️⃣ **Filtro por fecha**
+> Muestra las ventas realizadas en una fecha específica (`2025-06-01`).
+
+7️⃣ **Clientes sin ventas**
+> Muestra los clientes que no han realizado ninguna venta.
+
+8️⃣ **Productos vendidos**
+> Muestra el total de productos vendidos por producto, ordenado de mayor a menor.
+
+---
 ## Ejercicios Prácticos Clase 1
 Usando el script "Clase01_Script.sql"
 1. Creación de Tablas
