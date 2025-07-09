@@ -23,6 +23,61 @@ Modalidad de Enseñanza
     Presencial con componente online: Esto sugiere una combinación de clases en persona para habilidades prácticas y componentes online para teoría o actividades complementarias, ofreciendo una experiencia de aprendizaje flexible y accesible.
 
 ## Contenido del Repositorio
+## Clase 5: Triggers en Bases de Datos
+
+### Descripción de la Clase
+En esta clase, exploraremos los **triggers** en SQL, una herramienta fundamental para automatizar tareas y asegurar la integridad de los datos dentro de una base de datos. Los triggers se ejecutan automáticamente en respuesta a eventos específicos, como inserciones, actualizaciones o eliminaciones de registros.
+
+### Contenido de la Clase
+
+1. **Presentación Teórica:**
+   - Definición de triggers y su utilidad en bases de datos.
+   - Tipos de triggers: AFTER e INSTEAD OF.
+   - Ejemplos prácticos de triggers para auditoría y validación de datos.
+
+2. **Ejemplos Prácticos:**
+   - Creación de un trigger para auditar inserciones en la tabla `Clientes`.
+   - Creación de un trigger para validar que el stock de un producto no sea negativo.
+
+3. **Ejercicio Práctico en Clase:**
+   - Crear un trigger que actualice automáticamente el estado de un pedido a "Completado" cuando todos los productos del pedido están disponibles en stock.
+
+
+### Ejercicio 4: Registrar Cambios de Estado de un Pedido
+
+**Problema:**
+
+La empresa desea mantener un registro histórico de los cambios de estado de cada pedido para fines de auditoría. Cada vez que se cambia el estado de un pedido, se debe registrar el cambio en una tabla separada.
+
+**Tu Tarea:**
+
+Desarrollar un **trigger** que registre cada cambio de estado en una tabla llamada `HistorialEstadoPedidos`.
+
+---
+
+### Ejercicio 5: Actualizar el Stock Después de un Pedido
+
+**Problema:**
+
+Cada vez que se confirma un pedido, el stock de los productos correspondientes debe reducirse en función de las cantidades solicitadas.
+
+**Tu Tarea:**
+
+Desarrollar un **trigger** que se active después de la confirmación de un pedido y actualice el stock de los productos involucrados.
+
+---
+
+### Ejercicio 6: Notificación de Stock Bajo
+
+**Problema:**
+
+La empresa necesita recibir alertas cuando el stock de cualquier producto baja por debajo de un cierto umbral para reordenar el inventario.
+
+**Tu Tarea:**
+
+Desarrollar un **trigger** que verifique el stock después de cada actualización y notifique (por ejemplo, con un `PRINT` o `RAISERROR`) si el stock está por debajo del umbral definido.
+
+
 
 - `***.sql`: Archivo con las ejercicios/soluciones de las clases.
 # Guía de Ejercicios - Bases de Datos Estructuradas
