@@ -23,7 +23,7 @@ Modalidad de Enseñanza
     Presencial con componente online: Esto sugiere una combinación de clases en persona para habilidades prácticas y componentes online para teoría o actividades complementarias, ofreciendo una experiencia de aprendizaje flexible y accesible.
 
 ## Contenido del Repositorio
-## Clase 5: Triggers en Bases de Datos
+## Triggers en Bases de Datos
 
 ### Descripción de la Clase
 En esta clase, exploraremos los **triggers** en SQL, una herramienta fundamental para automatizar tareas y asegurar la integridad de los datos dentro de una base de datos. Los triggers se ejecutan automáticamente en respuesta a eventos específicos, como inserciones, actualizaciones o eliminaciones de registros.
